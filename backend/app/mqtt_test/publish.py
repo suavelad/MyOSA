@@ -2,8 +2,8 @@ import ssl
 from paho.mqtt import publish
 
 # Your HiveMQ Cloud credentials
-USERNAME="hhivemq.webclient.1766746174553"
-PASSWORD='nl81%?mGy,oBgQA>7s0VL'
+USERNAME="hivemq.webclient.1766833151037"
+PASSWORD='f7TEHZ8>Ld#vy,R6j5%e'
 HOST = "3f870c7ecb2a48e6b76737cb2c13864c.s1.eu.hivemq.cloud"
 PORT = 8883
 
