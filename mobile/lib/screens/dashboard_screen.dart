@@ -18,6 +18,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   // Map<String, dynamic>? _stats; // Removed unused
   List<dynamic> _chartData = [];
   final List<String> _alerts = [];
+  final Map<String, DateTime> _lastAlertTimes = {};
   final String _selectedDeviceId = 'device123'; // Default/First device
   bool _isLoading = true;
 
@@ -94,8 +95,31 @@ class _DashboardScreenState extends State<DashboardScreen> {
     mqtt.connect(_selectedDeviceId);
 
     // Listen for Alerts
+    // Listen for Alerts
     mqtt.alertStream.listen((alertPayload) {
       if (mounted) {
+        // Parse payload to check for duplicates (20 min suppression)
+        String alertType = "general_alert";
+        try {
+          final data = json.decode(alertPayload);
+          if (data is Map && data.containsKey('alert')) {
+            alertType = data['alert'].toString();
+          }
+        } catch (_) {
+          // If not json, use entire string as type key or just ignore suppression
+        }
+
+        final now = DateTime.now();
+        if (_lastAlertTimes.containsKey(alertType)) {
+          final last = _lastAlertTimes[alertType]!;
+          if (now.difference(last).inMinutes < 20) {
+            debugPrint("Suppressing repeat alert: $alertType");
+            return;
+          }
+        }
+
+        _lastAlertTimes[alertType] = now;
+
         setState(() {
           _alerts.insert(0, alertPayload);
           if (_alerts.length > 20) _alerts.removeLast();

@@ -16,8 +16,8 @@ class MqttService {
   // HiveMQ Credentials
   final String server = '3f870c7ecb2a48e6b76737cb2c13864c.s1.eu.hivemq.cloud';
   final int port = 8883;
-  final String username = 'hivemq.webclient.1766077121308';
-  final String password = '!tL29;S7p#0jCTFmvcM<';
+  final String username = 'hivemq.webclient.1766746174553';
+  final String password = 'l81%?mGy,oBgQA>7s0VL';
 
   Future<void> connect(String deviceId) async {
     client = MqttServerClient.withPort(server,

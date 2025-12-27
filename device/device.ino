@@ -21,7 +21,7 @@ const char* password = "1234567890";
 // HiveMQ Cloud credentials
 const char* mqtt_server   = "3f870c7ecb2a48e6b76737cb2c13864c.s1.eu.hivemq.cloud";
 const int   mqtt_port     = 8883;
-const char* mqtt_user     = "hivemq.webclient.17ccc21308";
+const char* mqtt_user     = "hivemq.webclient.1766746174553";
 const char* mqtt_pass     = "!tL29;S7p#dffdd<";
 
 
