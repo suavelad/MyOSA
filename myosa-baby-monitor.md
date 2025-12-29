@@ -51,10 +51,14 @@ Our solution is a **Smart Wearable** that tracks environmental parameters and ph
 ### Videos
 
 1. **Live Prototype Demonstration (3 min)**
-<video controls src="https://github.com/suavelad/MyOSA/blob/main/myosa-demo.mp4" width="100%"></video>
+<video controls width="100%">
+  <source src="/myosa-demo.mp4" type="video/mp4">
+</video>
 
 2. **Project Presentation (5 min)**
-<video src="https://github.com/suavelad/MyOSA/blob/main/myosa-presentation.mp4" width="100%" controls></video>
+<video controls width="100%">
+  <source src="/myosa-presentation.mp4" type="video/mp4">
+</video>
 
 ## 🛠️ Features (Detailed)
 
