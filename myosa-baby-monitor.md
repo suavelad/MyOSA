@@ -51,10 +51,10 @@ Our solution is a **Smart Wearable** that tracks environmental parameters and ph
 ### Videos
 
 1. **Live Prototype Demonstration (3 min)**
-<video src="myosa-demo.mp4" width="100%" controls></video>
+<video controls src="https://github.com/suavelad/MyOSA/blob/main/myosa-demo.mp4" width="100%"></video>
 
 2. **Project Presentation (5 min)**
-<video src="myosa-presentation.mp4" width="100%" controls></video>
+<video src="https://github.com/suavelad/MyOSA/blob/main/myosa-presentation.mp4" width="100%" controls></video>
 
 ## 🛠️ Features (Detailed)
 
@@ -74,7 +74,6 @@ Instead of relying on cloud processing which introduces latency, the MYOSA devic
 
 The device continuously reads from **BMP180** (Barometric Pressure Sensor)
  **MPU6050** 6-Axis Accelerator & Gyroscope Sensors.
-
 
 * **Dynamic Thresholds:** Users can set custom thresholds (e.g., "Alert if Temp > 38°C") via the mobile app.
 * **Over-the-Air Updates:** The app pushes these configuration updates back to the device firmware in real-time via MQTT.
